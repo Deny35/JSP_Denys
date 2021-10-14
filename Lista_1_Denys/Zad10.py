@@ -1,9 +1,6 @@
 import cmath
 
-x = 0
-y = 1
-
-z = complex(x, y)
+z = complex(0, 1)
 
 print('Część rzeczywista:')
 print('sin:   ', cmath.sin(z).real)
