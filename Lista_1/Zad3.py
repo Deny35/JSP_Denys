@@ -11,5 +11,5 @@ def pole(a, b, alfa):
 
 a= int(input('Bok a:'))
 b = int(input('Bok b:'))
-alfa = int(input('Kąt alfa:'))
+alfa = float(input('Kąt alfa:'))
 print(pole(a, b, alfa))
