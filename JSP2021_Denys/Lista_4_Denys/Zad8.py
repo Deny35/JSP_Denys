@@ -1,4 +1,4 @@
-n =int((input("Ilość elementow: ")))
+n = int((input("Ilość elementow: ")))
 
 a = 1
 suma = 0
