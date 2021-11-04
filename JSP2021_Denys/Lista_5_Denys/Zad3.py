@@ -8,7 +8,8 @@ def zamiana(lr):
     ld = list(ld) # zmiana na liste
     for i in range(0, len(lr)):
         if lr[len(lr)-i-1] in tlumacz:
-            ld[i] = (tlumacz.get(lr[len(lr)-i-1]))#zmienia na liczbe      
+            ld[i] = (tlumacz.get(lr[len(lr)-i-1]))#zmienia na liczbe 
+            print(lr[i])     
        
     for i in range(0, len(lr)):
         print('i=  ',i)

@@ -6,4 +6,4 @@ else:
 ################################################################
 print('##############################')
 odp = ('Parzysta', 'Nieparzysta')
-print (odp[liczba%2])
+print ('bez if:',odp[liczba%2])
