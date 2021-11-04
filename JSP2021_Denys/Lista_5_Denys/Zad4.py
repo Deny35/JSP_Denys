@@ -1,7 +1,5 @@
 klucz ={'a':'y', 'e':'i', 'i':'o', 'o':'a', 'y':'e'}
-klucz1 = {v: k for k, v in klucz.items()}
-print(klucz)
-print(klucz1)
+klucz1 = {v: k for k, v in klucz.items()}# odwraca kolejnośc klucz
 
 def szyfrowanie(zdanie):
     zdanie = list(zdanie) #zmienia w liste
@@ -13,12 +11,12 @@ def szyfrowanie(zdanie):
     return zdanie
 
 def deszyfrowanie(zdanie):
-    zdanie = list(zdanie)
+    zdanie = list(zdanie)#zmienia w liste
     for i in range(0, len(zdanie)):
         if zdanie[i] in klucz1:
-            zdanie[i] = (klucz1.get(zdanie[i]))
+            zdanie[i] = (klucz1.get(zdanie[i]))# zmienia litery
     x =''
-    zdanie = x.join(zdanie)
+    zdanie = x.join(zdanie)# spaja litery
     return zdanie
 
 zdanie = input('Podaj zdanie: ')

@@ -13,9 +13,12 @@ ilosc = int(len(lista))
 print('Cawarty student to:', lista[3] )
 print('Dwuch pierwszych studentów to:', lista[0:2] )
 print('Dwuch ostatnich studentów to:', lista[ilosc-2:])
-
-for i in lista:
+for i in range(0,lista.count('Basia')):
     lista.remove('Basia')
 
-print(lista)
+ilosc1 = len(lista)
+
+print('Ilość studentów=', ilosc1)
+
+print(tuple(lista))
 
