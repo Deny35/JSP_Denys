@@ -1,5 +1,7 @@
 import SzyfrCezara
 import time
+import os
+from os import path
 
 
 plik = open('C:\studia_s3\L_Python\JSP2021_Denys\Lista_8_Denys\PLIT_DO_SZYFROWANIA.txt', 'r', encoding='utf-8')
@@ -19,3 +21,6 @@ timee  = time.localtime()
 day = timee.tm_mday
 month = timee.tm_mon
 year = timee.tm_year
+
+name_file = ('C:\studia_s3\L_Python\JSP2021_Denys\Lista_8_Denys\plik_do_szyfrowania'+ str(klucz) + '_' + str(year) + '-' + str(month) + '-' + str(day)+'.txt')
+a = os.path.isfile(name_file)
