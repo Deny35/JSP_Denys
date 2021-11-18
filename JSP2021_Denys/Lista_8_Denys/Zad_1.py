@@ -22,5 +22,7 @@ day = timee.tm_mday
 month = timee.tm_mon
 year = timee.tm_year
 
-name_file = ('C:\studia_s3\L_Python\JSP2021_Denys\Lista_8_Denys\plik_do_szyfrowania'+ str(klucz) + '_' + str(year) + '-' + str(month) + '-' + str(day)+'.txt')
+name_file = ('plik_do_szyfrowania'+ str(klucz) + '_' + str(year) + '-' + str(month) + '-' + str(day)+'.txt')
+print(name_file)
 a = os.path.isfile(name_file)
+print(a)
