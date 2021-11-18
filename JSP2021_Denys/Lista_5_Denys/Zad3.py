@@ -10,9 +10,9 @@ def zamiana(lr):
         if lr[len(lr)-i-1] in tlumacz:
             ld[i] = (tlumacz.get(lr[len(lr)-i-1]))#zmienia na liczbe 
             print(lr[i])     
-       
+    
     for i in range(0, len(lr)):
-        print('i=  ',i)
+        print('i=  ',i,)
         if i == len(lr)-1:
             print('tak')
             if ld[i] >= ld[i-1]:
@@ -28,7 +28,7 @@ def zamiana(lr):
             #if ld[i]>ld[i+1]:
              #   suma = -ld[i]
         else:
-            if ld[i+2] >= ld[i+1]:
+            if ld[i] >= ld[i-1]:
                 print(suma,'+',ld[i])
                 suma += ld[i]
                 print('suma= ',suma)

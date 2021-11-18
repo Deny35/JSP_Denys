@@ -4,11 +4,11 @@ def lookAndSay(x):
     result=[]
     i=0
     while i < len(x):
-        licznik=1
+        count=1
         while i + 1 <len(x) and x[i] == x[i+1]:
             i+=1
-            licznik+=1
-        result.append(str(licznik)+x[i])
+            count+=1
+        result.append(str(count)+x[i])
         i+=1
     return ''.join(result)
 
