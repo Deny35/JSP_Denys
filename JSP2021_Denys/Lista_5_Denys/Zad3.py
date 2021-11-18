@@ -12,31 +12,21 @@ def zamiana(lr):
             print(lr[i])     
     
     for i in range(0, len(lr)):
-        print('i=  ',i,)
         if i == len(lr)-1:
-            print('tak')
             if ld[i] >= ld[i-1]:
-                print(suma,'-',ld[i])
                 suma += ld[i]
-                print('suma= ',suma)
             else:
-                print(suma,'-',ld[i])
                 suma -= ld[i]
-                print('suma= ',suma)
         elif i == 0:
             suma = ld[i]
             #if ld[i]>ld[i+1]:
              #   suma = -ld[i]
         else:
             if ld[i] >= ld[i-1]:
-                print(suma,'+',ld[i])
                 suma += ld[i]
-                print('suma= ',suma)
             else:
-                print(suma,'-',ld[i])
                 suma -= ld[i]
-                print('suma= ',suma)
-        
+    print(suma)    
     
     
     
