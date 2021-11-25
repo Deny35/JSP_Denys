@@ -51,3 +51,12 @@ def save_file_z2(text, key):
         print('Plik zapisano')
     else:
         print('Plik nie zapisany')
+
+def save_file_z4(pesels, day, month, year, sex):
+    path_file = os.getcwd() + '\pesel_odzyfrowany.txt'
+    print(pesels)
+    print(month)
+    file_save = open(path_file,'w+' )
+    for i in range (0,10):
+        file_save.write((pesels[i] + ':\n' + day[i] + '-' + month[i] + '-' + year[i] + '\t' + sex[i]+'\n'))
+    file_save.close() 
