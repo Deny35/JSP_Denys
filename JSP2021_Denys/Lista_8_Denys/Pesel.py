@@ -2,7 +2,7 @@ import time
 import random
 
 def pesel_gen():
-    sex = input('Chłopiec (M) czy dziewczynka (F): ')
+    
 
     timee  = time.localtime()
     day = str(timee.tm_mday)
@@ -12,7 +12,7 @@ def pesel_gen():
     z2 = str(random.randint(0, 9))
     z3 = str(random.randint(0, 9))
 
-    if sex == 'M':
+    if sex == 1:
         x = random.randint(0, 9)
         while x%2 == 0:
             x = random.randint(0, 9)
