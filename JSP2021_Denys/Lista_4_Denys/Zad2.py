@@ -1,7 +1,10 @@
 ilosc = int(input('Podaj ilość liczb: '))
 liczby = []
 for i in range(0,ilosc):
-    x = int(input())
+    if i == 0:
+        x = int(input('Podaj pierwszy: '))
+    else:
+        x = int(input('Podaj kolejny:'))
     liczby.append(x)
 liczby_bez = list(set(liczby))# funkcja set tworzy kolejke uporządkowaną z unikalnymi elementami
                               #, a list zamienia kolekcje na liste
