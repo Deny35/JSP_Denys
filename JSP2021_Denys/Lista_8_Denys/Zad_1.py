@@ -1,28 +1,22 @@
 import SzyfrCezara
-import time
-import os
-from os import path
+import Open
+import Save
 
 
-plik = open('C:\studia_s3\L_Python\JSP2021_Denys\Lista_8_Denys\PLIT_DO_SZYFROWANIA.txt', 'r', encoding='utf-8')
-try:
-	tekst = plik.read()
-finally:
-	plik.close()
+path = 'C:\studia_s3\L_Python\JSP2021_Denys\Lista_8_Denys\PLIT_DO_SZYFROWANIA.txt'
 
-#print(tekst)
+unencrypted_text = Open.open_file(path)
 
-klucz = int(input('Podaj klucz syfrowania:'))
-szyfr = SzyfrCezara.szyfrowanie(tekst, klucz)
+key = int(input('Podaj klucz syfrowania od 1 do 10:'))
+if key > 10:
+    while key > 10:
+        print('Klucz nie prawidłowy!')
+        key = int(input('Podaj klucz syfrowania od 1 do 10:'))
+elif key < 1:
+    while key < 1:
+        print('Klucz nie prawidłowy!')
+        key = int(input('Podaj klucz syfrowania od 1 do 10:'))
+encrypted_text = SzyfrCezara.szyfrowanie(unencrypted_text, key)
 
-#print(szyfr)
 
-timee  = time.localtime()
-day = timee.tm_mday
-month = timee.tm_mon
-year = timee.tm_year
-
-name_file = ('plik_do_szyfrowania'+ str(klucz) + '_' + str(year) + '-' + str(month) + '-' + str(day)+'.txt')
-print(name_file)
-a = os.path.isfile(name_file)
-print(a)
+Save.save_file(encrypted_text, key)
