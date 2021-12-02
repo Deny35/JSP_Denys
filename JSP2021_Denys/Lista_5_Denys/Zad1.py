@@ -7,14 +7,19 @@ tlumacz={'nic':'','zero': 0,'jeden': 1, 'dwa':2,'trzy' :3, 'cztery': 4, 'pięć'
 def zamiana(dzi,jed):
     j = 0
     p = 0
-    if(dzi in tlumacz):
-        k=(tlumacz.get(dzi))#zmienia na liczbe
-    if(jed in tlumacz):
-        j=(tlumacz.get(jed))#zmienia na liczbe
-    print(k+j)
+    if jed == 'nic':
+        if(dzi in tlumacz):
+            k=(tlumacz.get(dzi))#zmienia na liczbe
+        return(k)
+    else:
+        if(dzi in tlumacz):
+            k=(tlumacz.get(dzi))#zmienia na liczbe
+        if(jed in tlumacz):
+            j=(tlumacz.get(jed))#zmienia na liczbe
+        return(k+j)
 
 
 x= input('Podaj słownie liczbę: ')
 y=x.split()
-print(y)
-zamiana(y[0],y[1])
+y.append('nic')
+print(zamiana(y[0],y[1]))
