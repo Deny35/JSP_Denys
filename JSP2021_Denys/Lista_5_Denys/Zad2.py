@@ -39,13 +39,17 @@ if (x>=20 and x<100):
     c = -1 #ustawia wartość na pusta    
     a = int((x/10))*10# oblicza całkowite dziesiątki
     b = x%10# oblicza od 1-9
+    if b == 0:
+         b = -1
 if(x>=100 and x<1000):
      d = -1 #ustawia wartość na pusta    
      c = int((x/100))*100# oblicza całkowite setki
      a = int(((x%100)/10))*10# oblicza całkowite dziesiątki
      b = x%10# oblicza od 1-9
      if b == 0:
-         b = -1
+        b = -1
+     if a == 0:
+        a = -1
 if(x>=1000 and x<2000):
      d = int((x/1000))*1000 # oblicza człkowite tysiące
      c = int(((x%d)/100))*100# oblicza całkowite setki
@@ -53,5 +57,6 @@ if(x>=1000 and x<2000):
      b = x%10 # oblicza od 1-9
      if b == 0:
          b = -1
-     
+     if a == 0:
+         a = -1
 zamiana(d,c,a,b)
