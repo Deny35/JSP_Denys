@@ -9,7 +9,7 @@ def zamiana(lr):
     for i in range(0, len(lr)):
         if lr[len(lr)-i-1] in tlumacz:
             ld[i] = (tlumacz.get(lr[len(lr)-i-1]))#zmienia na liczbe 
-            print(lr[i])     
+               
     
     for i in range(0, len(lr)):
         if i == len(lr)-1:
@@ -26,10 +26,10 @@ def zamiana(lr):
                 suma += ld[i]
             else:
                 suma -= ld[i]
-    print(suma)    
+    return(suma)    
     
     
     
 
-n = input('Podaj liczbe: ')
-zamiana(n)
+n = input('Podaj liczbe(Należy wpisywać WIELKIMI literami!): ')
+print(zamiana(n))
