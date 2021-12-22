@@ -1,8 +1,7 @@
 import Open_zad4
 import Save
-file = (Open_zad4.open_file('C:\studia_s3\L_Python\JSP2021_Denys\pesel.txt'))
+file = (Open_zad4.open_file('C:\studia_s3\L_Python\pesel.txt'))
 
-print(file[1][0:2])
 year = []
 month = []
 day = []

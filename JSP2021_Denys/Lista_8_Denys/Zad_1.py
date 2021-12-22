@@ -3,7 +3,8 @@ import Open
 import Save
 
 
-path = 'C:\studia_s3\L_Python\JSP2021_Denys\Lista_8_Denys\PLIT_DO_SZYFROWANIA.txt'
+#C:\studia_s3\L_Python\JSP2021_Denys\Lista_8_Denys\PLIT_DO_SZYFROWANIA.txt
+path = input('Podaj ścieże do pliku: ')
 
 unencrypted_text = Open.open_file(path)
 

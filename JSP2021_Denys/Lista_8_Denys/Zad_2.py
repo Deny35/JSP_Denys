@@ -4,17 +4,21 @@ import os
 import Open
 import Save
 
-path_encrypted = input('Podaj ścieżke pliku: ')
+path_encrypted = input('Podaj sciezke pliku: ')
 
 i = 0
 
 for file in os.listdir(path_encrypted):
-    if fnmatch.fnmatch(file, '*.txt'):
+    if fnmatch.fnmatch(file, 'plik_zaszyfrowany*.txt'):
+       print (file)
        key = file[17]
        if file[18] == 0:
            key = 10
-    file_text =  path_encrypted +'\\' + file
-    encrypted_text = Open.open_file(file_text)
-    #unencrypted_text = SzyfrCezara.deszyfrowanie(encrypted_text, key)
-    Save.save_file_z2(encrypted_text, key)
+       print(key)
+       file_text =  path_encrypted +'\\' + file
+       encrypted_text = Open.open_file(file_text)
+       print(encrypted_text)
+       unencrypted_text = SzyfrCezara.deszyfrowanie(encrypted_text, key)
+       print(unencrypted_text)
+   #Save.save_file_z2(encrypted_text, key)
     

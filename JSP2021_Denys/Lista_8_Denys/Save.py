@@ -1,12 +1,14 @@
 import time
 import os
-from os import path
 
 def save_file(text, key):
-    path = input("Podaj nazwe folderu: ")
+    path_file =  os.getcwd()
+    path_f = input("Podaj nazwe folderu: ")
+    path = path_file + '\\' + path_f
+    print(path)
     if not os.path.exists(path):
         try:
-            os.mkdir(path)
+            os.makedirs(path)
         except OSError:
             print("Nie udalo sie stworzyc folderu")
         else:
@@ -18,7 +20,7 @@ def save_file(text, key):
         month = timee.tm_mon
         year = timee.tm_year
         path_file = path + '\plik_zaszyfrowany'+ str(key) + '_' + str(year) + '-' + str(month) + '-' + str(day)+'.txt'
-        file_save = open(path_file,'w+' )
+        file_save = open(path_file,'w+', encoding='utf-8' )
         file_save.write(text)
         file_save.close()    
 
@@ -27,6 +29,7 @@ def save_file(text, key):
     else:
         print('Plik nie zapisany')
 
+############################################################
 def save_file_z2(text, key):
     path = input("Podaj nazwe folderu: ")
     if not os.path.exists(path):
@@ -51,7 +54,7 @@ def save_file_z2(text, key):
         print('Plik zapisano')
     else:
         print('Plik nie zapisany')
-
+##############################################################################################
 def save_file_z4(pesels, day, month, year, sex):
     path_file = os.getcwd() + '\pesel_odzyfrowany.txt'
     print(pesels)

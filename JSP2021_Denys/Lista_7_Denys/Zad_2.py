@@ -19,7 +19,7 @@ for i in range (1,101):
 
 start_time = time.time()
 # sortowanie
-print(Insert_sort(a))
+Insert_sort(a)
 
 stop_time = time.time()
 print(stop_time - start_time)
@@ -32,7 +32,7 @@ for i in range (1,201):
 
 start_time = time.time()
 # sortowanie
-print(Insert_sort(b))
+Insert_sort(b)
 
 stop_time = time.time()
 print(stop_time - start_time)
@@ -45,7 +45,7 @@ for i in range (1,301):
 
 start_time = time.time()
 # sortowanie
-print(Insert_sort(c))
+Insert_sort(c)
 
 stop_time = time.time()
 print(stop_time - start_time)
