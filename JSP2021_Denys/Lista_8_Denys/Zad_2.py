@@ -17,8 +17,7 @@ for file in os.listdir(path_encrypted):
        print(key)
        file_text =  path_encrypted +'\\' + file
        encrypted_text = Open.open_file(file_text)
-       print(encrypted_text)
-       unencrypted_text = SzyfrCezara.deszyfrowanie(encrypted_text, key)
+       unencrypted_text = SzyfrCezara.deszyfrowanie(encrypted_text, int(key))
        print(unencrypted_text)
    #Save.save_file_z2(encrypted_text, key)
     
