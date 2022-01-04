@@ -28,3 +28,15 @@ def get_power_set(s):
 #print(alo[0])
 belo = [[],[3],[1],[2,3],[3]]
 print(belo.sort(key=len))
+
+ini_list = [[1, 2, 3], [1, 2], [1, 2, 3, 4],
+                [1, 2, 3, 4, 5], [2, 4, 6]]
+  
+# printing initial ini_list
+print ("initial list", str(ini_list))
+  
+# sorting on bais of size of list
+ini_list.sort(key = len)
+  
+# printing final result
+print("final list", str(ini_list))

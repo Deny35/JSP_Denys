@@ -1,8 +1,8 @@
 import time
 import os
 
-def save_file(text, key):
-    path_file =  os.getcwd()
+def save_file(text, key,path_file):
+    #path_file =  os.getcwd()
     path_f = input("Podaj nazwe folderu: ")
     path = path_file + '\\' + path_f
     print(path)
