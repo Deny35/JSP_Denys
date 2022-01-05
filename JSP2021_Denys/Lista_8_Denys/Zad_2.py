@@ -19,5 +19,5 @@ for file in os.listdir(path_encrypted):
        encrypted_text = Open.open_file(file_text)
        unencrypted_text = SzyfrCezara.deszyfrowanie(encrypted_text, int(key))
        print(unencrypted_text)
-   #Save.save_file_z2(encrypted_text, key)
+       Save.save_file_z2(unencrypted_text, key, path_encrypted)
     

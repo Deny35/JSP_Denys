@@ -1,6 +1,10 @@
 import Open_zad4
 import Save
-file = (Open_zad4.open_file('C:\studia_s3\L_Python\pesel.txt'))
+
+#C:\studia_s3\L_Python\JSP2021_Denys\pesel.txt
+
+path = input('Podaj ścieże do pliku: ')
+file = (Open_zad4.open_file(path))
 
 year = []
 month = []
@@ -15,5 +19,8 @@ for i in range (0,10):
        year.append(file[i][0:2])
        month.append(file[i][2:4])
        day.append(file[i][4:6])
-       sex.append(file[i][9])
+       if int(file[i][9])%2 == 0:
+           sex.append('K')
+       else:
+           sex.append('K')
 Save.save_file_z4(file, day, month, year, sex)
