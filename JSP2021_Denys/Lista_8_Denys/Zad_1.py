@@ -1,12 +1,13 @@
 import SzyfrCezara
 import Open
 import Save
-
+import os
 
 #C:\studia_s3\L_Python\JSP2021_Denys\Lista_8_Denys\PLIT_DO_SZYFROWANIA.txt
-path = input('Podaj ścieże do pliku: ')
+path = input('Podaj sciezke do folderu pliku: ')
 file = input('Podaj nazwę pliku z rozszerzeniem: ')
-unencrypted_text = Open.open_file(path + '\\' + file)
+path = os.path.join(path, file)
+unencrypted_text = Open.open_file(path)
 
 key = int(input('Podaj klucz syfrowania od 1 do 10:'))
 if key > 10:

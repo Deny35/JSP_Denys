@@ -4,7 +4,7 @@ import os
 import Open
 import Save
 
-path_encrypted = input('Podaj sciezke pliku: ')
+path_encrypted = input('Podaj sciezke do folderu pliku: ')
 
 i = 0
 

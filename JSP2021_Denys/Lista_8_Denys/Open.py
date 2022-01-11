@@ -1,5 +1,5 @@
 import os
-from os import path
+
 
 def open_file(path):
    
