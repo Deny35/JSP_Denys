@@ -4,7 +4,7 @@ import os
 def save_file(text, key,path_file):
     #path_file =  os.getcwd()
     path_f = input("Podaj nazwe folderu: ")
-    path = path_file + '\\' + path_f
+    path = os.path.join(path_file, path_f)
     print(path)
     if not os.path.exists(path):
         try:
@@ -31,8 +31,8 @@ def save_file(text, key,path_file):
 
 ############################################################
 def save_file_z2(text, key, path_file):
-    path_folder = input("Podaj nazwe folderu: ")
-    path = path_file + '\\' + path_folder
+    path_f = input("Podaj nazwe folderu: ")
+    path = os.path.join(path_file, path_f)
     if not os.path.exists(path):
         try:
             os.mkdir(path)
@@ -57,7 +57,8 @@ def save_file_z2(text, key, path_file):
         print('Plik nie zapisany')
 ##############################################################################################
 def save_file_z4(pesels, day, month, year, sex):
-    path_file = os.getcwd() + '\pesel_odzyfrowany.txt'
+    path_file = os.getcwd()
+    path = os.path.join(path_file, 'odczyt_peselu.txt')
     file_save = open(path_file,'w+' )
     for i in range (0,10):
         file_save.write((pesels[i] + ':\n' + day[i] + '-' + month[i] + '-' + year[i] + '\t' + sex[i]+'\n'))
