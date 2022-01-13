@@ -37,13 +37,14 @@ for t_ in range(t_int):
 print(vx)
 print(vy)
 print(t)
-plt.subplot(221, title = "predkosc", xlabel = "[s]", ylabel = "[m/s]")
+
+plt.subplot(311, title = "predkosc", xlabel = "[s]", ylabel = "[m/s]")
 plt.plot(t, vy, t, vx)
 
-plt.subplot(222, title = "polozenie w czasie", xlabel = "[s]", ylabel = "[m]")
+plt.subplot(312, title = "polozenie w czasie", xlabel = "[s]", ylabel = "[m]")
 plt.plot(t, y)
 
-plt.subplot(223, title = "tor lotu", xlabel = "[m]", ylabel = "[m]")
+plt.subplot(313, title = "tor lotu", xlabel = "[m]", ylabel = "[m]")
 plt.plot(x, y)
 
 plt.show()
