@@ -2,7 +2,8 @@ import sys, re
 import numpy
 
 def operacje(liczby):
-    dane = [int(i) for i in liczby if type(i) == int or i.isdigit()]  
+    dane = [int(i) for i in liczby if i.isdigit()]  
+    print(dane)
     wyniki = [numpy.mean(dane), numpy.var(dane), numpy.std(dane)]
     return wyniki
 
@@ -23,12 +24,10 @@ def open_file(path):
   
 
 if len(sys.argv) == 2:
-            print(sys.argv[1])
-            x = open_file(sys.argv[1])
-            print(x)
+    liczby = open_file(sys.argv[1])
             
     
 else:
-    x = sys.argv[1:]
-wyniki = operacje(x)
+    liczby = sys.argv[1:]
+wyniki = operacje(liczby)
 print("srednia: ", wyniki[0], "wariancja: ", wyniki[1] ,"odchylenie standardowe: ", wyniki[2])
