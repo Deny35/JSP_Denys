@@ -1,9 +1,9 @@
 import sys, re
 import numpy
 
-def operacje(info):
-    dane = [int(i) for i in info if type(i) == int or i.isdigit()]  
-    wyniki = [numpy.mean(dane), numpy.std(dane), numpy.var(dane)]
+def operacje(liczby):
+    dane = [int(i) for i in liczby if type(i) == int or i.isdigit()]  
+    wyniki = [numpy.mean(dane), numpy.var(dane), numpy.std(dane)]
     return wyniki
 
 import os
@@ -31,4 +31,4 @@ if len(sys.argv) == 2:
 else:
     x = sys.argv[1:]
 wyniki = operacje(x)
-print("srednia: ", wyniki[0], "odchylenie standardowe: ", wyniki[1], "wariancja: ", wyniki[2])
+print("srednia: ", wyniki[0], "wariancja: ", wyniki[1] ,"odchylenie standardowe: ", wyniki[2])
