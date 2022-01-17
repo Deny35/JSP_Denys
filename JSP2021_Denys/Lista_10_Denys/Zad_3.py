@@ -1,21 +1,23 @@
 class Lista:
-    def podlista(self, n):
+    def __init__(self,set):
+        self.set = set
+    def podlista(self):
         i = 0
         j = 1
         k = 2
         subset = []
         bufor_list = []
-        while i < len(n)-1:
-            while j < len(n)-1:
-                while k <= len(n)-1:
-                    if n[i] + n[j] + n[k] == 0:
-                        bufor_1 = n[i]
-                        bufor_2 = n[j]
-                        bufor_3 = n[k]
+        while i < len(self.set)-1:
+            while j < len(self.set)-1:
+                while k <= len(self.set)-1:
+                    if self.set[i] + self.set[j] + self.set[k] == 0:
+                        bufor_1 = self.set[i]
+                        bufor_2 = self.set[j]
+                        bufor_3 = self.set[k]
                         bufor_list.append((bufor_1, bufor_2, bufor_3))
-                        n.remove(bufor_1)
-                        n.remove(bufor_2)
-                        n.remove(bufor_3)
+                        self.set.remove(bufor_1)
+                        self.set.remove(bufor_2)
+                        self.set.remove(bufor_3)
                         i = 0
                         j = 1
                         k = 2
@@ -28,5 +30,5 @@ class Lista:
                     
 
 a = [1,1,-1,3,-2,-2]
-clasa = Lista()
-print(clasa.podlista(a))
+clasa = Lista(a)
+print(clasa.podlista())

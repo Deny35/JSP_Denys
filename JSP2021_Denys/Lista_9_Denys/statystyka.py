@@ -15,7 +15,7 @@ def open_file(path):
    if not os.path.exists(path):
         pass    
    else:
-        while open(path):
+        with open(path):
             return [int(x) for x in path]
   
 
