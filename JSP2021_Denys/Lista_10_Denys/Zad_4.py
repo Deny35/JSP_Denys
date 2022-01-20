@@ -272,7 +272,6 @@ class Ui_MainWindow(object):
             k1 = float(self.kwota1.toPlainText())
             index2 = self.waluta.index(y)
             k2 = float(self.wartosc[index2])
-
             print('k1',k1)
             print('k2',k2)
             wynik = k1/k2
