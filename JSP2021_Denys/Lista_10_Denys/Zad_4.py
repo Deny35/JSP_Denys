@@ -252,13 +252,13 @@ class Ui_MainWindow(object):
                     
         x = self.wybor1.currentText()
         y = self.wybor2.currentText()
-        print(x,y)
-
-        print(float(self.kwota1.toPlainText()))
-        '''if x == 'PLN' and y != 'PLN':
+ 
+        if x == 'PLN' and y != 'PLN':
             k1 = float(self.kwota1.toPlainText())
             index = self.waluta.index(y)
             k2 = float(self.wartosc[index])
+            print('k1',k1)
+            print('k2',k2)
             wynik = k1/k2
             self.kwota3.setText(str(round(wynik,2)))
         elif x != 'PLN' and y == 'PLN':
@@ -268,19 +268,15 @@ class Ui_MainWindow(object):
             wynik = k1*k2
             self.kwota3.setText(str(round(wynik,2)))
         else:
-         '''
-        k1 = float(self.kwota1.toPlainText())
-        if x != 'PLN':
-            index = self.waluta.index(x)
-            k2 = float(self.wartosc[index])
-            wynik = k1*k2
+            index1 = self.waluta.index(y)
+            k1 = float(self.kwota1.toPlainText())
+            index2 = self.waluta.index(y)
+            k2 = float(self.wartosc[index2])
+
+            print('k1',k1)
+            print('k2',k2)
+            wynik = k1/k2
             self.kwota3.setText(str(round(wynik,2)))
-        else:
-            index = self.waluta.index(y)
-            k2 = float(self.wartosc[index])
-            wynik = k1*k2
-            self.kwota3.setText(str(round(wynik,2)))
-        
        
                     
 

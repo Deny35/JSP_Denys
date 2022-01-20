@@ -7,10 +7,12 @@ class clas1:
     for elem in self.set:
       for sub_set in power_set:
         power_set=power_set+[list(sub_set)+[elem]]
+        print(power_set)
+      print('nowe')
     return power_set
 
 
 zbor = clas1([1,2,3])
 x = zbor.get_power_set()
 x.sort(key=len)
-print(x)
+#print(x)
